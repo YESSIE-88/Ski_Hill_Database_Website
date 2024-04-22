@@ -1,0 +1,68 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Ski Hill Information
+    link(rel="stylesheet", href="/styles/style.css")
+    style.
+      body {
+        font-family: 'Segoe UI Emoji', Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        color: #004080;
+      }
+      #skiHillButtons {
+        text-align: center;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #008CBA;
+        color: white;
+        padding: 40px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        font-size: 18px;
+        line-height: 0.5;
+        vertical-align: top;
+      }
+      button:hover {
+        background-color: #005f7f;
+      }
+      #weatherInfo, #runsInfo, #usersInfo {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+  body
+    h1 Ski Hill Information (Admin)
+
+    #skiHillButtons
+      button(onclick="getSkiHillData(1, false)") ⛷️ Camp Fortune
+      button(onclick="getSkiHillData(2, false)") ⛷️ Mount Timothy
+      button(onclick="getSkiHillData(3, false)") ⛷️ Mount Jamieson
+      button(onclick="displayUsers()") 👤 Users
+      button(id="editButton", onclick="editDetails()") ✏️ Edit
+
+    #weatherInfo
+    #runsInfo
+    #usersInfo
+
+    script(src="/scripts/main.js")

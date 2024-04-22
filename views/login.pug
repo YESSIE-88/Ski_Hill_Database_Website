@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Login
+    link(rel="stylesheet", href="/styles/style.css")
+    style.
+      body {
+        font-family: 'Segoe UI Emoji', Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+      h1, h2 {
+        text-align: center;
+        color: #004080;
+      }
+      label {
+        color: #004080;
+        display: block;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      input[type="text"], input[type="password"] {
+        display: block;
+        margin: 0 auto 10px;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #004080;
+      }
+      input[type="text"]:focus, input[type="password"]:focus {
+        outline: none;
+        border-color: #008CBA;
+      }
+      button[type="submit"] {
+        display: block;
+        margin: 0 auto 10px;
+        padding: 15px 20px;
+        font-size: 18px;
+        border-radius: 0px;
+        border: none;
+        background-color: #008CBA;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        line-height: 0.5;
+      }
+      button[type="submit"]:hover {
+        background-color: #005f7f;
+      }
+
+  body
+    h1 Login
+    form(action="/login", method="POST")
+      label(for="username") Username:
+      input(type="text", id="username", name="username")
+      br
+      label(for="password") Password:
+      input(type="password", id="password", name="password")
+      br
+      button(type="submit") Login
+
+    h2 Register
+    form(action="/register", method="POST")
+      label(for="newUsername") New Username:
+      input(type="text", id="newUsername", name="newUsername")
+      br
+      label(for="newPassword") New Password:
+      input(type="password", id="newPassword", name="newPassword")
+      br
+      button(type="submit") Register
